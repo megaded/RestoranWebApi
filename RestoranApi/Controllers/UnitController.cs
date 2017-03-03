@@ -9,6 +9,7 @@ using RestoranApi.ViewModel.UnitViewModel;
 
 namespace RestoranApi.Controllers
 {
+    [RoutePrefix("unit")]
     public class UnitController : ApiController
     {
         private RestoranContext context;
@@ -16,6 +17,7 @@ namespace RestoranApi.Controllers
         {
             context = new RestoranContext();
         }
+
         public IEnumerable<UnitViewModel> GetAllUnits()
         {
             var units = context.Unit.ToList();
